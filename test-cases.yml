@@ -1,0 +1,103 @@
+---
+- summary: |
+    Проверка регистрации пользователя
+  requirement: |
+    Пользователь может зарегистрироваться
+  prerequisites:
+    Открыта страница Sign up
+  test-data: |
+    Nickname = hexlet2025
+    Email = hexlet2025@mail.ru
+    Password = pass2025
+    Password Confirmation = pass2025
+  steps:
+    - Вводим Nickname
+    - Вводим Email
+    - Вводим Password
+    - Вводим  Password Confirmation
+    - Нажимаем кнопку "Submit"
+  expected-result: |
+    Пользователь должен попасть на главную страницу
+
+- summary: |
+    Проверка регистрации пользователя с существующими логином и электронной почтой
+  requirement: |
+    При существующих логине или электронной почте пользователь должен получить сообщение об ошибке
+  prerequisites:
+    Открыта страница Sign up
+  test-data: |
+    Nickname = hexlet2025
+    Email = hexlet2025@mail.ru
+    Password = pass2025
+    Password Confirmation = pass2025
+  steps:
+    - Вводим Nickname
+    - Вводим Email
+    - Вводим Password
+    - Вводим  Password Confirmation
+    - Нажимаем кнопку "Submit"
+  expected-result: |
+    Пользователь должен попасть на главную страницу 
+    
+- summary: |
+    Проверка входа пользователя с существующими почтой и паролем
+  requirement: |
+    При верном вводе почты и пароля пользователь должен войти в систему
+  prerequisites: |
+    Открыта страница Sign in
+  test-data: |
+    Email = hexlet2025@mail.ru
+    Password = pass2025
+  steps:
+    - Вводим Email
+    - Вводим Password
+    - Нажимаем кнопку "Submit"
+  expected-result: |
+    Пользователь должен попасть на главную страницу
+
+- summary: |
+    Проверка входа пользователя с несуществующими почтой и паролем
+  requirement: |
+    При неправильной почте или пароле пользователь должен получить сообщение об ошибке
+  prerequisites:
+    Открыта страница Sign in
+  test-data: |
+    Email = hexlet@mail.ru
+    Password = pass20252025
+  steps:
+    - Вводим Email
+    - Вводим Password
+    - Нажимаем кнопку "Submit"
+  expected-result: |
+    Пользователь должен попасть на главную страницу
+    
+- summary: |
+    Проверка возможности игры с ботом без регистрации
+  requirement: |
+    Пользователь может играть с ботом без регистрации
+  prerequisites:
+    Открыта главня страница
+  test-data: |
+    Кнопка "TRY SIMPLE BATTLE"
+  steps:
+    - Нажать на кнопку "TRY SIMPLE BATTLE"
+  expected-result: |
+    Пользователь может писать код в игре
+
+- summary: |
+    Проверка возможности выбирать игру после регистрации
+  requirement: |
+    Пользователь может выбрать игру
+  prerequisites:
+    Пользователь уже зарегистрирован и вошёл через Sign in
+  test-data: |
+    Кнопка "TRY SIMPLE BATTLE"
+  steps:
+    - Нажать на кнопку "CREATE A GAME"
+    - Level = одна звезда
+    - Game type = "With a bot"
+    - Time comtrol = 3 min
+    - Choose task by name or tags = random task
+    - нажать "Create a battle"
+  expected-result: |
+    Пользователь может играть
