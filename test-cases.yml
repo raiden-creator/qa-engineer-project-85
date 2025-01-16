@@ -82,7 +82,7 @@
   steps:
     - Нажать на кнопку "TRY SIMPLE BATTLE"
   expected-result: |
-    Пользователь может писать код в игре
+    Пользователь может играть 
 
 - summary: |
     Проверка возможности выбирать игру после регистрации
@@ -97,7 +97,186 @@
     - Level = одна звезда
     - Game type = "With a bot"
     - Time comtrol = 3 min
-    - Choose task by name or tags = random task
+    - Choose task by name or tags = digits_validator
     - нажать "Create a battle"
   expected-result: |
     Пользователь может играть
+
+- summary: |
+    Проверка возможности выбирать разные уровни заданий
+  requirement: |
+    Пользователь может выбрать игру с разным уровнем сложности
+  prerequisites:
+    Пользователь уже зарегистрирован и вошёл через Sign in
+  test-data: |
+    Кнопка "TRY SIMPLE BATTLE"
+  steps:
+    - Нажать на кнопку "CREATE A GAME"
+    - Level = четыре звезды
+    - Game type = "With a bot"
+    - Time comtrol = 3 min
+    - Choose task by name or tags = random task
+    - нажать "Create a battle"
+  expected-result: |
+    Пользователь может выбрать уровень сложности задания
+
+- summary: |
+    Проверка возможности выбирать задачи на русскои и английском языке
+  requirement: |
+    Пользователь может выбрать язык задачи
+  prerequisites:
+    Пользователь уже зарегистрирован и вошёл через Sign in
+  test-data: |
+    Кнопка "TRY SIMPLE BATTLE"
+  steps:
+    - Нажать на кнопку "CREATE A GAME"
+    - Level = одна звезда
+    - Game type = "With a bot"
+    - Time comtrol = 3 min
+    - Choose task by name or tags = random task
+    - нажать "Create a battle"
+    - нажать на кнопку "RU"
+  expected-result: |
+    Пользователь может выбрать язык задачи
+
+- summary: |
+    Проверка возможности написания кода в игре
+  requirement: |
+    Пользователь может писать код во время игры
+  prerequisites:
+    Пользователь уже зарегистрирован и вошёл через Sign in
+  test-data: |
+    Кнопка "TRY SIMPLE BATTLE"
+  steps:
+    - Нажать на кнопку "CREATE A GAME"
+    - Level = одна звезда
+    - Game type = "With a bot"
+    - Time comtrol = 3 min
+    - Choose task by name or tags = random task
+    - нажать "Create a battle"
+    - написать "= qwerty" в поле игрока
+  expected-result: |
+    Пользователь может писать код в игре
+
+- summary: |
+    Проверка возможности писать в чат во время игры
+  requirement: |
+    Пользователь может писать в чат
+  prerequisites:
+    Пользователь уже зарегистрирован и вошёл через Sign in
+  test-data: |
+    Кнопка "TRY SIMPLE BATTLE"
+  steps:
+    - Нажать на кнопку "CREATE A GAME"
+    - Level = одна звезда
+    - Game type = "With a bot"
+    - Time comtrol = 3 min
+    - Choose task by name or tags = random task
+    - нажать "Create a battle"
+    - написать в чате: "Hello"
+  expected-result: |
+    Пользователь может писать в чате
+
+- summary: |
+    Проверка возможности повторной игры после проигрыша
+  requirement: |
+    Пользователь может начать игру снова
+  prerequisites:
+    Пользователь уже зарегистрирован и вошёл через Sign in
+  test-data: |
+    Кнопка "TRY SIMPLE BATTLE"
+  steps:
+    - Нажать на кнопку "CREATE A GAME"
+    - Level = одна звезда
+    - Game type = "With a bot"
+    - Time comtrol = 3 min
+    - Choose task by name or tags = random task
+    - нажать "Create a battle"
+    - нажать "Give up"
+    - нажать "Rematch"
+  expected-result: |
+    Пользователь может начать снова играть
+
+- summary: |
+    Проверка возможности оставления отзыва после игры
+  requirement: |
+    Пользователь может написать кормментарий об игре
+  prerequisites:
+    Пользователь уже зарегистрирован и вошёл через Sign in
+  test-data: |
+    Кнопка "TRY SIMPLE BATTLE"
+  steps:
+    - Нажать на кнопку "CREATE A GAME"
+    - Level = одна звезда
+    - Game type = "With a bot"
+    - Time comtrol = 3 min
+    - Choose task by name or tags = random task
+    - нажать "Create a battle"
+    - нажать "Give up"
+    - нажать "Send Feedback"
+    - ввести "Thank you"
+    - нажать "Send Feedback"
+  expected-result: |
+    Пользователь может оставлять обратную связь об игре
+
+- summary: |
+    Проверка возможности добавлять друзей в игру
+  requirement: |
+    Пользователь может приводить новых игроков в команду
+  prerequisites:
+    Пользователь уже зарегистрирован и вошёл через Sign in
+  test-data: |
+    Кнопка "TRY SIMPLE BATTLE"
+  steps:
+    - Нажать на кнопку "CREATE A GAME"
+    - Level = одна звезда
+    - Game type = "With a friend"
+    - Time comtrol = 3 min
+    - Choose opponent = vtm
+    - Choose task by name or tags = random task
+    - Нажать "Create invite"
+  expected-result: |
+    Пользователь может играть с другом
+
+- summary: |
+    Проверка неправильного набора тестов в игре
+  requirement: |
+    При неверном решении в игре возникает предупреждение
+  prerequisites:
+    Пользователь уже зарегистрирован и вошёл через Sign in
+  test-data: |
+    Кнопка "TRY SIMPLE BATTLE"
+  steps:
+    - Нажать на кнопку "CREATE A GAME"
+    - Level = одна звезда
+    - Game type = "With a bot"
+    - Time comtrol = 3 min
+    - Choose task by name or tags = "digits_validator"
+    - Нажать "Create a battle"
+    - Ввести "= 12345"
+    - Нажать "Run"
+  expected-result: |
+    Возникает звук предупреждения и на экране пишется "failure"
+
+
+    
+
+- summary: |
+    Проверка просмотра рейтинга пользователя
+  requirement: |
+    Пользователь может видеть свой рейтинг среди всех участников
+  prerequisites:
+    Пользователь уже зарегистрирован и вошёл через Sign in
+  test-data: |
+    Кнопка "User rating"
+  steps:
+    - Нажать на профиль "hexlet2025"
+    - Нажать "User rating"
+    - Ввести в поиске "hexlet2025"
+  expected-result: |
+    Пользователь видит свой рейтинг
+
+
+    
+
+
