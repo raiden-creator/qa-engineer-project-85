@@ -239,6 +239,26 @@
     Пользователь может играть с другом
 
 - summary: |
+    Проверка правильного набора тестов в игре
+  requirement: |
+    При верном решении игры набор тестов зеленого цвета
+  prerequisites:
+    Пользователь уже зарегистрирован и вошёл через Sign in
+  test-data: |
+    Кнопка "TRY SIMPLE BATTLE"
+  steps:
+    - Нажать на кнопку "CREATE A GAME"
+    - Level = одна звезда
+    - Game type = "With a bot"
+    - Time comtrol = 3 min
+    - Choose task by name or tags = "digits_validator"
+    - Нажать "Create a battle"
+    - Ввести "= 12345"
+    - Нажать "Run"
+  expected-result: |
+    Возникает звук предупреждения и на экране пишется "failure"
+    
+- summary: |
     Проверка неправильного набора тестов в игре
   requirement: |
     При неверном решении в игре возникает предупреждение
@@ -258,9 +278,6 @@
   expected-result: |
     Возникает звук предупреждения и на экране пишется "failure"
 
-
-    
-
 - summary: |
     Проверка просмотра рейтинга пользователя
   requirement: |
@@ -275,8 +292,3 @@
     - Ввести в поиске "hexlet2025"
   expected-result: |
     Пользователь видит свой рейтинг
-
-
-    
-
-
