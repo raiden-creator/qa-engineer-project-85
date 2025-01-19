@@ -39,7 +39,7 @@
   expected-result: |
     Пользователь должен попасть на главную страницу 
 
-    - summary: |
+- summary: |
     Проверка регистрации пользователя с несуществующей электронной почтой
   requirement: |
     Пользователь может зарегистрироваться с несущесвующей электронной почтой 
@@ -90,6 +90,19 @@
     - Нажимаем кнопку "Submit"
   expected-result: |
     Пользователь должен попасть на главную страницу
+
+- summary: |
+    Проверка выхода из личного кабинета
+  requirement: |
+    Пользователь может разлогиниться
+  prerequisites:
+    Пользователь вошёл в личный кабинет
+  test-data: |
+    Кнопка "Sign Out"
+  steps:
+    - Нажимаем кнопку "Sign Out"
+  expected-result: |
+    Пользователь вышел из личного кабинета
     
 - summary: |
     Проверка возможности игры с ботом без регистрации
@@ -166,7 +179,7 @@
   prerequisites:
     Пользователь уже зарегистрирован и вошёл через Sign in
   test-data: |
-    Кнопка "TRY SIMPLE BATTLE"
+    Страница игры
   steps:
     - Нажать на кнопку "CREATE A GAME"
     - Level = одна звезда
@@ -177,6 +190,103 @@
     - написать "= qwerty" в поле игрока
   expected-result: |
     Пользователь может писать код в игре
+
+- summary: |
+    Проверка возможности сброса решения в игре
+  requirement: |
+    Пользователь может удалить решение
+  prerequisites:
+    Пользователь уже зарегистрирован и вошёл через Sign in
+  test-data: |
+    Кнопка "Reset Solution"
+  steps:
+    - Нажать на кнопку "CREATE A GAME"
+    - Level = одна звезда
+    - Game type = "With a bot"
+    - Time comtrol = 3 min
+    - Choose task by name or tags = random task
+    - Нажать "Create a battle"
+    - Написать "= qwerty" в поле игрока
+    - Нажать "Reset Solution"
+  expected-result: |
+    Решение пользователя удалено
+
+- summary: |
+    Проверка возможности проверки кода в игре
+  requirement: |
+    Пользователь может проверить своё решение
+  prerequisites:
+    Пользователь уже зарегистрирован и вошёл через Sign in
+  test-data: |
+    Кнопка "Run"
+  steps:
+    - Нажать на кнопку "CREATE A GAME"
+    - Level = одна звезда
+    - Game type = "With a bot"
+    - Time comtrol = 3 min
+    - Choose task by name or tags = random task
+    - Нажать "Create a battle"
+    - Написать "= qwerty" в поле игрока
+    - Нажать "Run"
+  expected-result: |
+    Пользователь видит вывод тестов
+
+- summary: |
+    Проверка возврата на главную страницу
+  requirement: |
+    Пользователь может вернуться со страницы игры на главную страницу
+  prerequisites:
+    Пользователь уже зарегистрирован и вошёл через Sign in
+  test-data: |
+    Кнопка "Back to home"
+  steps:
+    - Нажать на кнопку "CREATE A GAME"
+    - Level = одна звезда
+    - Game type = "With a bot"
+    - Time comtrol = 3 min
+    - Choose task by name or tags = random task
+    - Нажать "Create a battle"
+    - Нажать "Back to home"
+  expected-result: |
+    Пользователь вернулся на главную страницу
+
+- summary: |
+    Проверка выбора языка задачи в игре
+  requirement: |
+    Пользователь может выбрать описание задачи на русскои или английском языке
+  prerequisites:
+    Пользователь уже зарегистрирован и вошёл через Sign in
+  test-data: |
+    Кнопка "En"
+  steps:
+    - Нажать на кнопку "CREATE A GAME"
+    - Level = одна звезда
+    - Game type = "With a bot"
+    - Time comtrol = 3 min
+    - Choose task by name or tags = random task
+    - Нажать "Create a battle"
+    - Нажать "En"
+  expected-result: |
+    Описание задачи отражается на английском языке
+
+- summary: |
+    Проверка изменения цвета поля для написания кода в игре
+  requirement: |
+    Пользователь может выбрать черный или белый цвет в поле написания кода
+  prerequisites:
+    Пользователь уже зарегистрирован и вошёл через Sign in
+  test-data: |
+    Кнопка изменения цвета
+  steps:
+    - Нажать на кнопку "CREATE A GAME"
+    - Level = одна звезда
+    - Game type = "With a bot"
+    - Time comtrol = 3 min
+    - Choose task by name or tags = random task
+    - Нажать "Create a battle"
+    - Нажать на значок "луны"
+  expected-result: |
+    Цает поля написания кода стал чёрным
 
 - summary: |
     Проверка возможности писать в чат во время игры
