@@ -38,6 +38,26 @@
     - Нажимаем кнопку "Submit"
   expected-result: |
     Пользователь должен попасть на главную страницу 
+
+    - summary: |
+    Проверка регистрации пользователя с несуществующей электронной почтой
+  requirement: |
+    Пользователь может зарегистрироваться с несущесвующей электронной почтой 
+  prerequisites:
+    Открыта страница Sign up
+  test-data: |
+    Nickname = qwerty
+    Email = qwe@mail.ru
+    Password = pass2025
+    Password Confirmation = pass2025
+  steps:
+    - Вводим Nickname
+    - Вводим Email
+    - Вводим Password
+    - Вводим  Password Confirmation
+    - Нажимаем кнопку "Submit"
+  expected-result: |
+    Пользователь успешно зарегистрировался 
     
 - summary: |
     Проверка входа пользователя с существующими почтой и паролем
