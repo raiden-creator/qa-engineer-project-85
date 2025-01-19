@@ -257,7 +257,27 @@
     - Нажать "Create invite"
   expected-result: |
     Пользователь может играть с другом
-
+    
+- summary: |
+    Проверка отмены игры с другим пользователем
+  requirement: |
+    Пользователь может приводить новых игроков в команду
+  prerequisites:
+    Пользователь уже зарегистрирован и вошёл через Sign in
+  test-data: |
+    Кнопка "TRY SIMPLE BATTLE"
+  steps:
+    - Нажать на кнопку "CREATE A GAME"
+    - Level = одна звезда
+    - Game type = "With other user"
+    - Time comtrol = 3 min
+    - Choose task by name or tags = random task
+    - Нажать "Create battle"
+    - Нажать на игру на главной странице сайта
+    - Нажать "Cancel"
+  expected-result: |
+    Игра отменена
+    
 - summary: |
     Проверка правильного набора тестов в игре
   requirement: |
@@ -273,10 +293,9 @@
     - Time comtrol = 3 min
     - Choose task by name or tags = "digits_validator"
     - Нажать "Create a battle"
-    - Ввести "= 12345"
-    - Нажать "Run"
+    - Ввести верное решение
   expected-result: |
-    Возникает звук предупреждения и на экране пишется "failure"
+    Тесты проходят проверку
     
 - summary: |
     Проверка неправильного набора тестов в игре
@@ -361,7 +380,6 @@
     - Нажать "Show" в строке digits_validator
   expected-result: |
     Пользователь видит информацию по задаче
-
     
 - summary: |
     Проверка просмотра завершённых игр
@@ -370,13 +388,186 @@
   prerequisites:
     Пользователь уже зарегистрирован и вошёл через Sign in
   test-data: |
+    Кнопка "Completed Games"
+  steps:
+    - Нажать на профиль "hexlet2025"
+    - Нажать "My profile"
+    - Нажать "Completed Games"
+    - Нажать "Show"
+  expected-result: |
+    Пользователь видит результат игры
+
+- summary: |
+    Проверка смены логина после регистрации
+    requirement: |
+    Пользователь может поменять логин после регистрации
+  prerequisites:
+    Пользователь уже зарегистрирован и вошёл через Sign in
+  test-data: |
+    Кнопка "Your name"
+  steps:
+    - Нажать на профиль "hexlet2025"
+    - Нажать "Settings"
+    - Нажать "Your name"
+    - Ввести "hexlet20252025"
+    - Нажать "Save"
+  expected-result: |
+    Логин успешно изменён
+
+- summary: |
+    Проверка отключения звука на сайте
+    requirement: |
+    Пользователь может отключить звук
+  prerequisites:
+    Пользователь уже зарегистрирован и вошёл через Sign in
+  test-data: |
+    Кнопка "Your name"
+  steps:
+    - Нажать на профиль "hexlet2025"
+    - Нажать "Settings"
+    - Нажать "Select sound level"
+    - Нажать на зачеркнутый микрофон
+    - Нажать "Save"
+  expected-result: |
+    Звук на сайте отключен
+
+- summary: |
+    Проверка просмотра завершённых турниров
+    requirement: |
+    Пользователь может посмотреть завершённые турниры
+  prerequisites:
+    Пользователь уже зарегистрирован и вошёл через Sign in
+  test-data: |
+    Кнопка "Tournaments"
+  steps:
+    - Нажать на профиль "hexlet2025"
+    - Нажать "Tournaments"
+    - Выбрать в "My fancy tournament" турнир со статусом "finished"
+    - Нажать "Show"
+  expected-result: |
+    Пользователь видит результат завершнного турнира
+
+- summary: |
+    Проверка создания турнира
+    requirement: |
+    Пользователь может создать турнир
+  prerequisites:
+    Пользователь уже зарегистрирован и вошёл через Sign in
+  test-data: |
+    Кнопка "Create a new tournament"
+  steps:
+    - Нажать на профиль "hexlet2025"
+    - Нажать "Tournaments"
+    - Нажать "Create a new tournament"
+    - Ввести имя "First"
+    - Выбрать тип "individul"
+    - Нажать "Create"
+  expected-result: |
+    Пользователь создал турнир
+
+- summary: |
+    Проверка участия в турнире
+    requirement: |
+    Пользователь может присоединиться к турниру
+  prerequisites:
+    Пользователь уже зарегистрирован и вошёл через Sign in
+  test-data: |
+    Кнопка "join"
+  steps:
+    - Нажать на профиль "hexlet2025"
+    - Нажать "Tournaments"
+    - Выбрать в "My fancy tournament" турнир со статусом "waiting_participants"
+    - Нажать "Show"
+    - Нажать "Join"
+  expected-result: |
+    Пользователь участвует в турнире
+
+- summary: |
+    Проверка просмотра описания задачи
+    requirement: |
+    Пользователь может просматривать описание задач
+  prerequisites:
+    Пользователь уже зарегистрирован и вошёл через Sign in
+  test-data: |
     Кнопка "Tasks"
   steps:
     - Нажать на профиль "hexlet2025"
     - Нажать "Tasks"
-    - Нажать "Show" в строке digits_validator
+    - Выбрать "digits_validator"
+    - Нажать "Show"
   expected-result: |
-    Пользователь видит информацию по задаче
+    Пользователь может видеть описание задачи
+
+- summary: |
+    Проверка создания задачи
+    requirement: |
+    Пользователь может создать задачу
+  prerequisites:
+    Пользователь уже зарегистрирован и вошёл через Sign in
+  test-data: |
+    Кнопка "Tasks"
+  steps:
+    - Нажать на профиль "hexlet2025"
+    - Нажать "Tasks"
+    - Нажать "Create new task"
+  expected-result: |
+    Пользователь создал задачу
+
+- summary: |
+    Проверка просмотра кода проекта
+    requirement: |
+    Пользователь может посмотреть документацию о проекте
+  prerequisites:
+    Пользователь уже зарегистрирован и вошёл через Sign in
+  test-data: |
+    Кнопка "SourceCode"
+  steps:
+    - Нажать "SourceCode"
+  expected-result: |
+    Пользователь видит документацию проекта
+
+- summary: |
+    Проверка кнопки перехода на сайт школы программирования "Хекслет"
+    requirement: |
+    Пользователь может перейти по ссылке 
+  prerequisites:
+    Пользователь уже зарегистрирован и вошёл через Sign in
+  test-data: |
+    Кнопка "Hexlet"
+  steps:
+    - Нажать "Hexlet"
+  expected-result: |
+    Пользователь переходит на сайт: https://ru.hexlet.io/
+
+- summary: |
+    Проверка присоединения к сервису "Discord"
+    requirement: |
+    Пользователь может присоединиться к сервису "Discord"
+  prerequisites:
+    Пользователь уже зарегистрирован и вошёл через Sign in
+  test-data: |
+    Кнопка "Join Discord""
+  steps:
+    - Нажать "Join Discord""
+  expected-result: |
+    Пользователь переходит на сайт: https://discord.gg/dTpFXrYU3v
+
+- summary: |
+    Проверка кнопки перехода в Telegram в "Хекслет Сообщество"
+    requirement: |
+    Пользователь может перейти по ссылке в в Telegram в "Хекслет Сообщество"
+  prerequisites:
+    Пользователь уже зарегистрирован и вошёл через Sign in
+  test-data: |
+    Кнопка "Tg#codebattle"
+  steps:
+    - Нажать "Tg#codebattle"
+  expected-result: |
+    Пользователь переходит на сайт: https://t.me/hexletcommunity/5
+
+    
+
+
 
 
 
