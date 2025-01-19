@@ -279,6 +279,25 @@
     Возникает звук предупреждения и на экране пишется "failure"
 
 - summary: |
+    Проверка возможности сдаться в игре
+  requirement: |
+    Пользователь может окончить игру раньше времени
+  prerequisites:
+    Пользователь уже зарегистрирован и вошёл через Sign in
+  test-data: |
+    Кнопка "TRY SIMPLE BATTLE"
+  steps:
+    - Нажать на кнопку "CREATE A GAME"
+    - Level = одна звезда
+    - Game type = "With a bot"
+    - Time comtrol = 3 min
+    - Choose task by name or tags = "digits_validator"
+    - Нажать "Create a battle"
+    - Нажать "Give up
+  expected-result: |
+    Игра окончена
+
+- summary: |
     Проверка просмотра рейтинга пользователя
   requirement: |
     Пользователь может видеть свой рейтинг среди всех участников
