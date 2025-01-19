@@ -60,6 +60,10 @@
     status: pass
 
 - summary: |
+    Проверка возможности сдаться в игре
+     status: pass
+
+- summary: |
     Проверка просмотра рейтинга пользователя
     status: pass
 
