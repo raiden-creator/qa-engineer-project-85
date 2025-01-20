@@ -22,7 +22,7 @@
 - summary: |
     Проверка регистрации пользователя с существующими логином и электронной почтой
   requirement: |
-    При существующих логине или электронной почте пользователь должен получить сообщение об ошибке
+    При существующих логине или электронной почте пользователь получает сообщение об ошибке
   prerequisites:
     Открыта страница Sign up
   test-data: |
@@ -46,10 +46,10 @@
   prerequisites:
     Открыта страница Sign up
   test-data: |
-    Nickname = qwerty
-    Email = qwe@mail.ru
-    Password = pass2025
-    Password Confirmation = pass2025
+    Nickname = Test1000
+    Email = Test1000@mail.ru
+    Password = qwerty12345
+    Password Confirmation = qwerty12345
   steps:
     - Вводим Nickname
     - Вводим Email
@@ -124,7 +124,7 @@
   prerequisites:
     Пользователь уже зарегистрирован и вошёл через Sign in
   test-data: |
-    Кнопка "TRY SIMPLE BATTLE"
+    Кнопка "CREATE A GAME"
   steps:
     - Нажать на кнопку "CREATE A GAME"
     - Level = одна звезда
@@ -142,7 +142,7 @@
   prerequisites:
     Пользователь уже зарегистрирован и вошёл через Sign in
   test-data: |
-    Кнопка "TRY SIMPLE BATTLE"
+    Кнопка "level"
   steps:
     - Нажать на кнопку "CREATE A GAME"
     - Level = четыре звезды
@@ -160,7 +160,7 @@
   prerequisites:
     Пользователь уже зарегистрирован и вошёл через Sign in
   test-data: |
-    Кнопка "TRY SIMPLE BATTLE"
+    Кнопка "RU"
   steps:
     - Нажать на кнопку "CREATE A GAME"
     - Level = одна звезда
@@ -295,7 +295,7 @@
   prerequisites:
     Пользователь уже зарегистрирован и вошёл через Sign in
   test-data: |
-    Кнопка "TRY SIMPLE BATTLE"
+    Кнопка чата
   steps:
     - Нажать на кнопку "CREATE A GAME"
     - Level = одна звезда
@@ -314,7 +314,7 @@
   prerequisites:
     Пользователь уже зарегистрирован и вошёл через Sign in
   test-data: |
-    Кнопка "TRY SIMPLE BATTLE"
+    Кнопка "Rematch"
   steps:
     - Нажать на кнопку "CREATE A GAME"
     - Level = одна звезда
@@ -334,7 +334,7 @@
   prerequisites:
     Пользователь уже зарегистрирован и вошёл через Sign in
   test-data: |
-    Кнопка "TRY SIMPLE BATTLE"
+    Кнопка "Send Feedback"
   steps:
     - Нажать на кнопку "CREATE A GAME"
     - Level = одна звезда
@@ -356,7 +356,7 @@
   prerequisites:
     Пользователь уже зарегистрирован и вошёл через Sign in
   test-data: |
-    Кнопка "TRY SIMPLE BATTLE"
+    Кнопка "Create invite"
   steps:
     - Нажать на кнопку "CREATE A GAME"
     - Level = одна звезда
@@ -375,7 +375,7 @@
   prerequisites:
     Пользователь уже зарегистрирован и вошёл через Sign in
   test-data: |
-    Кнопка "TRY SIMPLE BATTLE"
+    Кнопка "Cancel"
   steps:
     - Нажать на кнопку "CREATE A GAME"
     - Level = одна звезда
@@ -395,7 +395,7 @@
   prerequisites:
     Пользователь уже зарегистрирован и вошёл через Sign in
   test-data: |
-    Кнопка "TRY SIMPLE BATTLE"
+    Проверка правильного набора тестов
   steps:
     - Нажать на кнопку "CREATE A GAME"
     - Level = одна звезда
@@ -414,7 +414,7 @@
   prerequisites:
     Пользователь уже зарегистрирован и вошёл через Sign in
   test-data: |
-    Кнопка "TRY SIMPLE BATTLE"
+    Проверка неправильного набора тестов
   steps:
     - Нажать на кнопку "CREATE A GAME"
     - Level = одна звезда
@@ -434,7 +434,7 @@
   prerequisites:
     Пользователь уже зарегистрирован и вошёл через Sign in
   test-data: |
-    Кнопка "TRY SIMPLE BATTLE"
+    Кнопка "Give up"
   steps:
     - Нажать на кнопку "CREATE A GAME"
     - Level = одна звезда
@@ -442,7 +442,7 @@
     - Time comtrol = 3 min
     - Choose task by name or tags = "digits_validator"
     - Нажать "Create a battle"
-    - Нажать "Give up
+    - Нажать "Give up"
   expected-result: |
     Игра окончена
 
@@ -531,7 +531,7 @@
   prerequisites:
     Пользователь уже зарегистрирован и вошёл через Sign in
   test-data: |
-    Кнопка "Your name"
+    Кнопка отключения звука
   steps:
     - Нажать на профиль "hexlet2025"
     - Нажать "Settings"
