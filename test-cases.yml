@@ -129,7 +129,7 @@
     - Нажать на кнопку "CREATE A GAME"
     - Level = одна звезда
     - Game type = "With a bot"
-    - Time comtrol = 3 min
+    - Time control = 3 min
     - Choose task by name or tags = digits_validator
     - нажать "Create a battle"
   expected-result: |
@@ -147,7 +147,7 @@
     - Нажать на кнопку "CREATE A GAME"
     - Level = четыре звезды
     - Game type = "With a bot"
-    - Time comtrol = 3 min
+    - Time control = 3 min
     - Choose task by name or tags = random task
     - нажать "Create a battle"
   expected-result: |
@@ -165,7 +165,7 @@
     - Нажать на кнопку "CREATE A GAME"
     - Level = одна звезда
     - Game type = "With a bot"
-    - Time comtrol = 3 min
+    - Time control = 3 min
     - Choose task by name or tags = random task
     - нажать "Create a battle"
     - нажать на кнопку "RU"
@@ -184,7 +184,7 @@
     - Нажать на кнопку "CREATE A GAME"
     - Level = одна звезда
     - Game type = "With a bot"
-    - Time comtrol = 3 min
+    - Time control = 3 min
     - Choose task by name or tags = random task
     - нажать "Create a battle"
     - написать "= qwerty" в поле игрока
@@ -203,7 +203,7 @@
     - Нажать на кнопку "CREATE A GAME"
     - Level = одна звезда
     - Game type = "With a bot"
-    - Time comtrol = 3 min
+    - Time control = 3 min
     - Choose task by name or tags = random task
     - Нажать "Create a battle"
     - Написать "= qwerty" в поле игрока
@@ -223,7 +223,7 @@
     - Нажать на кнопку "CREATE A GAME"
     - Level = одна звезда
     - Game type = "With a bot"
-    - Time comtrol = 3 min
+    - Time control = 3 min
     - Choose task by name or tags = random task
     - Нажать "Create a battle"
     - Написать "= qwerty" в поле игрока
@@ -243,7 +243,7 @@
     - Нажать на кнопку "CREATE A GAME"
     - Level = одна звезда
     - Game type = "With a bot"
-    - Time comtrol = 3 min
+    - Time control = 3 min
     - Choose task by name or tags = random task
     - Нажать "Create a battle"
     - Нажать "Back to home"
@@ -262,7 +262,7 @@
     - Нажать на кнопку "CREATE A GAME"
     - Level = одна звезда
     - Game type = "With a bot"
-    - Time comtrol = 3 min
+    - Time control = 3 min
     - Choose task by name or tags = random task
     - Нажать "Create a battle"
     - Выбрать "Java 21"
@@ -281,7 +281,7 @@
     - Нажать на кнопку "CREATE A GAME"
     - Level = одна звезда
     - Game type = "With a bot"
-    - Time comtrol = 3 min
+    - Time control = 3 min
     - Choose task by name or tags = random task
     - Нажать "Create a battle"
     - Нажать на значок "луны"
@@ -300,7 +300,7 @@
     - Нажать на кнопку "CREATE A GAME"
     - Level = одна звезда
     - Game type = "With a bot"
-    - Time comtrol = 3 min
+    - Time control = 3 min
     - Choose task by name or tags = random task
     - нажать "Create a battle"
     - написать в чате: "Hello"
@@ -339,7 +339,7 @@
     - Нажать на кнопку "CREATE A GAME"
     - Level = одна звезда
     - Game type = "With a bot"
-    - Time comtrol = 3 min
+    - Time control = 3 min
     - Choose task by name or tags = random task
     - нажать "Create a battle"
     - нажать "Give up"
@@ -361,7 +361,7 @@
     - Нажать на кнопку "CREATE A GAME"
     - Level = одна звезда
     - Game type = "With a friend"
-    - Time comtrol = 3 min
+    - Time control = 3 min
     - Choose opponent = vtm
     - Choose task by name or tags = random task
     - Нажать "Create invite"
@@ -380,7 +380,7 @@
     - Нажать на кнопку "CREATE A GAME"
     - Level = одна звезда
     - Game type = "With a friend"
-    - Time comtrol = 3 min
+    - Time control = 3 min
     - Choose opponent = Test1000
     - Choose task by name or tags = random task
     - Нажать "Create invite"
@@ -400,7 +400,7 @@
     - Нажать на кнопку "CREATE A GAME"
     - Level = одна звезда
     - Game type = "With other user"
-    - Time comtrol = 3 min
+    - Time control = 3 min
     - Choose task by name or tags = random task
     - Нажать "Create battle"
   expected-result: |
@@ -418,7 +418,7 @@
     - Нажать на кнопку "CREATE A GAME"
     - Level = одна звезда
     - Game type = "With other user"
-    - Time comtrol = 3 min
+    - Time control = 3 min
     - Choose task by name or tags = random task
     - Нажать "Create battle"
     - Нажать на игру на главной странице сайта
@@ -438,7 +438,7 @@
     - Нажать на кнопку "CREATE A GAME"
     - Level = одна звезда
     - Game type = "With a bot"
-    - Time comtrol = 3 min
+    - Time control = 3 min
     - Choose task by name or tags = "digits_validator"
     - Нажать "Create a battle"
     - Ввести верное решение
@@ -457,7 +457,7 @@
     - Нажать на кнопку "CREATE A GAME"
     - Level = одна звезда
     - Game type = "With a bot"
-    - Time comtrol = 3 min
+    - Time control = 3 min
     - Choose task by name or tags = "digits_validator"
     - Нажать "Create a battle"
     - Ввести "= 12345"
@@ -477,7 +477,7 @@
     - Нажать на кнопку "CREATE A GAME"
     - Level = одна звезда
     - Game type = "With a bot"
-    - Time comtrol = 3 min
+    - Time control = 3 min
     - Choose task by name or tags = "digits_validator"
     - Нажать "Create a battle"
     - Нажать "Give up"
