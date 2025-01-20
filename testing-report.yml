@@ -132,14 +132,6 @@
     status: pass
 
 - summary: |
-    Проверка просмотра описания задачи
-    status: fail
-
-- summary: |
-    Проверка создания задачи
-     status: fail
-
-- summary: |
     Проверка просмотра кода проекта
      status: pass
 
