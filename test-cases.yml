@@ -367,6 +367,24 @@
     - Нажать "Create invite"
   expected-result: |
     Пользователь может играть с другом
+
+- summary: |
+    Проверка возможности игры с другим пользователем
+  requirement: |
+    Пользователь может играть с другим игроком
+  prerequisites:
+    Пользователь уже зарегистрирован и вошёл через Sign in
+  test-data: |
+    Кнопка "With other user"
+  steps:
+    - Нажать на кнопку "CREATE A GAME"
+    - Level = одна звезда
+    - Game type = "With other user"
+    - Time comtrol = 3 min
+    - Choose task by name or tags = random task
+    - Нажать "Create battle"
+  expected-result: |
+    Пользователь может играть с другим игроком
     
 - summary: |
     Проверка отмены игры с другим пользователем
