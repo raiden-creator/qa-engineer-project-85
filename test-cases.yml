@@ -330,7 +330,8 @@
     - Game type = "With a bot"
     - Time control = 3 min
     - Choose task by name or tags = random task
-    - нажать "Create a battle"
+    - Нажать "Create a battle"
+    - Написать в чате "Hello"
   expected-result: |
     Пользователь может писать в чате
 
