@@ -5,11 +5,11 @@
 
 - summary: |
     Проверка регистрации пользователя через Github
-    status: pass
+  status: pass
 
 - summary: |
     Проверка регистрации пользователя через Discord
-    status: pass
+  status: pass
 
 - summary: |
     Проверка регистрации пользователя с существующими логином и электронной почтой
@@ -25,151 +25,143 @@
 
 - summary: |
     Проверка регистрации пользователя с незарегистрированной электронной почтой
-    status: pass
+  status: pass
     
 - summary: |
     Проверка выхода из личного кабинета
-    status: pass
+  status: pass
 
 - summary: |
     Проверка возможности игры с ботом без регистрации
-    status: pass
+  status: pass
 
 - summary: |
     Проверка возможности выбирать игру после регистрации
-    status: pass
+  status: pass
 
 - summary: |
     Проверка возможности выбирать разные уровни заданий
-     status: pass
+  status: pass
 
 - summary: |
     Проверка возможности выбирать задачи на русскои и английском языке
-     status: pass
+  status: pass
 
 - summary: |
     Проверка возможности написания кода в игре
-    status: pass
+  status: pass
 
 - summary: |
     Проверка возможности сброса решения в игре
-     status: pass
+  status: pass
 
 - summary: |
     Проверка возможности проверки кода в игре
-    status: pass
+  status: pass
 
 - summary: |
     Проверка возврата на главную страницу
-    status: pass
+  status: pass
 
 - summary: |
     Проверка выбора языка кодирования в игре
-    status: pass
+  status: pass
 
 - summary: |
     Проверка изменения цвета поля для написания кода в игре
-    status: pass
+  status: pass
 
 - summary: |
     Проверка возможности писать в чат во время игры
-    status: pass
+  status: pass
 
 - summary: |
     Проверка возможности повторной игры после проигрыша
-     status: pass
+  status: pass
 
 - summary: |
     Проверка возможности оставления отзыва после игры
-     status: pass
+  status: pass
 
 - summary: |
     Проверка возможности добавлять друзей в игру
-     status: pass
+  status: pass
 
 - summary: |
     Проверка возможности отмены игры с другом
-    status: fail
+  status: fail
      
 - summary: |
     Проверка возможности игры с другим пользователем
-      status: pass
+  status: pass
      
 - summary: |
     Проверка отмены игры с другим пользователем
-      status: pass
+  status: pass
 
 - summary: |
     Проверка победы в игре
-    status: pass
+  status: pass
 
 - summary: |
     Проверка поражения в игре
-    status: pass
+  status: pass
 
 - summary: |
     Проверка возможности сдаться в игре
-     status: pass
+  status: pass
 
 - summary: |
     Проверка просмотра рейтинга пользователя
-    status: pass
+  status: pass
 
 - summary: |
     Проверка создания новой задачи
-     status: fail
+  status: fail
 
 - summary: |
     Проверка просмотра созданной задачи
-    status: fail
+  status: fail
 
 - summary: |
     Проверка просмотра завершённых игр
-    status: pass
+  status: pass
 
 - summary: |
     Проверка смены логина после регистрации
-    status: pass
+  status: pass
 
 - summary: |
     Проверка отключения звука на сайте
-    status: pass
+  status: pass
 
 - summary: |
     Проверка просмотра завершённых турниров
-    status: pass
+  status: pass
     
 - summary: |
     Проверка создания турнира
-    status: fail
+  status: fail
 
 - summary: |
     Проверка участия в турнире
-    status: pass
+  status: pass
 
 - summary: |
     Проверка просмотра кода проекта
-     status: pass
+  status: pass
 
 - summary: |
     Проверка кнопки перехода на сайт школы программирования "Хекслет"
-    status: pass
+  status: pass
 
 - summary: |
     Проверка присоединения к сервису "Discord"
-    status: fail
+  status: fail
 
 - summary: |
     Проверка кнопки перехода в Telegram в "Хекслет Сообщество"
-    status: pass
-
-    
-
-
-
-
-
-
+  status: pass
 
 
 
