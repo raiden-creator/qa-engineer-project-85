@@ -91,7 +91,7 @@
     Проверка входа пользователя с существующими почтой и паролем
   requirement: |
     При верном вводе почты и пароля пользователь должен войти в систему
-  prerequisites: |
+  prerequisites:
     Открыта страница Sign in
   test-data: |
     Email = hexlet2025@mail.ru
