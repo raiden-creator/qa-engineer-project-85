@@ -3,7 +3,7 @@
     Проверка регистрации пользователя через электронную почту
   requirement: |
     Пользователь может зарегистрироваться
-  prerequisites:
+  prerequisites: |
     Открыта страница Sign up
   test-data: |
     Nickname = hexlet2025
